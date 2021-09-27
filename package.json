@@ -1,0 +1,23 @@
+{
+  "name": "maig",
+  "version": "0.2.3",
+  "description": "star项目，对于网络请求的封装",
+  "main": "index.js",
+  "scripts": {
+    "start": "node libs/gen.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.jd.com:iot-store/jd-service.git"
+  },
+  "author": "bobblehat",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fs": "^0.0.1-security",
+    "markdown-it": "^12.1.0"
+  },
+  "bin": {
+    
+  }
+}
