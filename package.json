@@ -1,6 +1,6 @@
 {
   "name": "maig",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "star项目，对于网络请求的封装",
   "main": "index.js",
   "scripts": {
