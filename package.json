@@ -4,7 +4,8 @@
   "description": "star项目，对于网络请求的封装",
   "main": "index.js",
   "scripts": {
-    "start": "node libs/gen.js"
+    "start": "node libs/gen.js",
+    "test": ""
   },
   "repository": {
     "type": "git",

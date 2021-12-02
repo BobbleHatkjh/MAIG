@@ -14,7 +14,7 @@ try {
     RequestMD = fs.readFileSync(path.resolve(__dirname, file_name.requestMD), 'utf-8');
 } catch (error) {
     // console.log('未找到文件', error.path.substring(error.path.lastIndexOf('/') + 1, error.path.lastIndexOf('.')) );
-    if (error.path.substring(error.path.lastIndexOf('/') + 1, error.path.lastIndexOf('.')) === 'request') {
+    if ((error.path.substring(error.path.lastIndexOf('/') + 1, error.path.lastIndexOf('.'))).indexOf('request') !== -1) {
         console.log(`${console_name} 未找到 「request」 描述文件，将使用默认配置`);
         RequestMD = ''
     } else {
@@ -23,7 +23,7 @@ try {
     }
 }
 
-// 检查并声称文件夹
+// 检查并生成文件夹
 if (!fs.existsSync(path.resolve(__dirname, '../generate'))) {
     fs.mkdirSync(path.resolve(__dirname, '../generate'));
 }
@@ -72,7 +72,7 @@ async function Compile () {
     const InterfaceArray = Arraying('h2', result);
 
     // compile 头部
-    const _config_ = Config(proxy, Request(RequestModule())); // request配置
+    const _config_ = Config(proxy, RequestMD ? Request(RequestModule()) : {}); // request配置
 
     /**
      * 生成config
