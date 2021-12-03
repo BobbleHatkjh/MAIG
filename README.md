@@ -86,7 +86,72 @@ instance.interceptors.response
 
 ```
 
+### service模板
+```
+# `联友接口文档` lianyou
 
+> dev: http://iot-vehicle-licensedev.jd.local
+>
+> tests: http://test.jd.com
+
+要注意的这个:要英文格式，中文的会报错，冒号和后文要空一格
+右尖括号>要在换行的时候准确写出来，不能省略，因为markdown-it会使用经典渲染方式来渲染这个以保证不会出错
+
+<br>
+
+如果对标准md格式有疑惑可以去掘金的写文章面板上写一下
+
+## `获取用户信息` getUserInfo 
+
+这里保证正确md格式的前提下空不空格都行，但是##和```是不能省略的
+
+>请求地址: /app/queryEquipment
+>
+>请求方法: GET
+
+
+### 请求参数
+
+| 字段 |  类型  |  是否必填  | 说明 | 
+| ---- | ----  | ---- | ---- | 
+| expires  | string | 是 | Thu, 18 Dec 2043 12:00:00 GMT | 
+| path  | string | 否 | 这里是详尽的解释 | 
+| test  |  | 否 | 这里是一条注释 | 
+
+
+表格如果有空值会自动对应填充any类型
+是否必填这里其实必不一定要写【是/否】，实际上有非常多的备选字例如 必填，true，yes，1，Y，y等等都可以
+
+### 返回参数
+
+|  字段   |  类型  |  说明 | 
+|  ----  | ----  |  ---- | 
+| code  | string |  Thu, 18 Dec 2043 12:00:00 GMT | 
+| data  |  | 要解释下这个data | 
+| msg  | any | 这是如果错的时候返回的错误信息 | 
+
+
+
+<hr>
+<br>
+
+## `获取登陆状态` getLoginStatus
+
+
+
+>请求地址: /api/getLoginStatus
+>
+>请求方法: GET
+
+
+
+|     |    |    |  | 
+|  ----  | ----  | ----  | ---- | 
+| expires  | string | 过期时间（以 UTC 或 GMT 时间） | Thu, 18 Dec 2043 12:00:00 GMT | 
+| path  | string | 路径（默认cookie属于当前页面）| /test/ | 
+
+
+```
 
 待做：
 
